@@ -17,7 +17,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">此处有bug不能高亮..</a>
+                <a class="navbar-brand" href="#">顺水快递</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -36,6 +36,7 @@
                     <li>@Html.ActionLink("我要寄件", "Contact", "Home")</li>
                     <li>@Html.ActionLink("站点及费用查询", "Index", "Home")</li>
                     <li>@Html.ActionLink("客服服务", "Index", "Home")</li>
+                    
                 </ul>
                 <ul class="nav navbar-nav" style="float:right">
                     <li>
@@ -70,10 +71,10 @@
                     <h1 class="text-center">登录</h1>
                 </div>
                 <div class="modal-body">
-                    <form role="form">
+                    <form role="form" action="~/Home/Change">
                         <div class="form-group">
                             <label for="user_name">用户名</label>
-                            <input class="form-control" type="text" id="user_name" placeholder="">
+                            <input class="form-control" type="text" id="user_name" name="username" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="">密码</label>
@@ -132,7 +133,7 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/js")
     @RenderSection("scripts", required: false)
 
 

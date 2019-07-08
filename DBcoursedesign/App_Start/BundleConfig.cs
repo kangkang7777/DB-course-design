@@ -19,12 +19,17 @@ namespace DBcoursedesign
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+            bundles.Add(new ScriptBundle("~/bundles/js").Include(
+                    "~/Scripts/bootstrap.js",
+                     "~/Scripts/isotope.pkgd.min.js",
+                     "~/Scripts/imagesloaded.pkgd.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                "~/Content/templatemo-style.css",
+                "~/Content/bootstrap.css",
+                        "~/Content/Site.css"
+                      
+                      ));
         }
     }
 }
