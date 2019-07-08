@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: #333333;
+    background-color: #ebebeb;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -19,6 +19,10 @@
 
 /* Set width on the form input elements since they're 100% wide by default */
 
+.container {
+    width:1300px;
+}
+
 select,
 textarea {
     max-width: 280px;
@@ -31,12 +35,6 @@ textarea {
 .carousel-inner img {
     width: 100%;
     height: 100%;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: "微软雅黑"
 }
 
 * {
@@ -236,3 +234,286 @@ img {
     to {
         opacity: 1
     }
+}
+
+.w1100 {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.site-footer {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #a8aaba;
+    background:#333333
+}
+
+    .site-footer a {
+        color: #a8aaba;
+    }
+
+        .site-footer a:hover {
+            color: #f44 !important;
+        }
+
+    .site-footer .footer-article {
+        padding: 30px 0 20px;
+        overflow: hidden;
+    }
+
+    .site-footer .contact {
+        float: left;
+        width: 280px;
+    }
+
+        .site-footer .contact dt {
+            width: 90px;
+        }
+
+        .site-footer .contact .iconfont {
+            width: 66px;
+            height: 66px;
+            display: block;
+            float: left;
+            background: url(../image/kefu.png) center center no-repeat;
+            background-size: 55px;
+        }
+
+        .site-footer .contact .text {
+            font-size: 14px;
+            line-height: 30px;
+            color: #fff;
+        }
+
+        .site-footer .contact .tel {
+            padding: 3px 0 15px;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .site-footer .contact a {
+            display: block;
+            width: 90px;
+            font-size: 14px;
+            line-height: 30px;
+            color: #9b9ea0;
+            text-align: center;
+            border: 1px solid #9b9ea0;
+            border-radius: 4px;
+        }
+
+            .site-footer .contact a:hover {
+                color: #fff !important;
+            }
+
+    .site-footer .col-article {
+        float: left;
+        width: 171px;
+    }
+
+        .site-footer .col-article dt {
+            margin-bottom: 15px;
+            font-size: 16px;
+            font-weight: normal;
+            color: #d7d8d9;
+        }
+
+        .site-footer .col-article dd {
+            margin-bottom: 8px;
+            overflow: hidden;
+        }
+
+            .site-footer .col-article dd a {
+                font-size: 12px;
+                color: #9b9ea0;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+    .site-footer .wx {
+        float: left;
+        width: 135px;
+        margin-right: 0;
+    }
+
+        .site-footer .wx dt {
+            margin-bottom: 15px;
+            font-size: 16px;
+            font-weight: normal;
+            color: #d7d8d9;
+        }
+
+        .site-footer .wx dd {
+            margin-bottom: 15px;
+        }
+
+            .site-footer .wx dd img {
+                display: block;
+                width: 110px;
+                height: 110px;
+                margin: 5px 0;
+                border-radius: 2px;
+            }
+
+            .site-footer .wx dd.other {
+                margin-bottom: 0;
+                line-height: 18px;
+            }
+
+                .site-footer .wx dd.other span {
+                    display: block;
+                    font-size: 12px;
+                }
+
+                .site-footer .wx dd.other a {
+                    display: inline-block;
+                    margin-right: 5px;
+                    font-size: 12px;
+                    line-height: 18px;
+                    vertical-align: top;
+                }
+
+.footer-links {
+    padding: 10px 0;
+    border-top: 1px solid #41424c;
+    border-bottom: 1px solid #41424c;
+}
+
+    .footer-links p {
+        font-size: 14px;
+        color: #a8aaba;
+    }
+
+    .footer-links a {
+        margin-right: 20px;
+        font-size: 12px;
+        color: #a8aaba;
+    }
+
+.footer-info .info-text {
+    padding: 20px 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+    .footer-info .info-text .nav-bottom {
+        padding: 20px 0 5px;
+        font-size: 14px;
+        color: #ccc;
+        text-align: center;
+    }
+
+        .footer-info .info-text .nav-bottom a {
+            padding: 0 8px;
+            color: #9b9ea0;
+        }
+
+    .footer-info .info-text .copyright {
+        padding-top: 5px;
+    }
+
+    .footer-info .info-text em {
+        padding: 0 8px;
+    }
+
+
+
+.news {
+    padding: 40px 0 60px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: auto;
+}
+
+    .news li {
+        float: left;
+        width: 350px;
+        margin-left: 80px;
+        overflow: hidden;
+    }
+
+        .news li:first-child {
+            margin-left: 0;
+        }
+
+        .news li h3 {
+            padding-bottom: 15px;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: normal;
+        }
+
+        .news li h3 {
+            overflow: hidden;
+        }
+
+            .news li h3 .iconfont {
+                float: right;
+                width: 22px;
+                height: 22px;
+                margin-right: -100px;
+                font-size: 18px;
+                line-height: 22px;
+                color: #ccc;
+                text-indent: 3px;
+                border: 1px solid #ccc;
+                border-radius: 50%;
+                transition: all .2s;
+            }
+
+            .news li h3:hover a {
+                color: darkblue;
+            }
+
+            .news li h3:hover .iconfont {
+                margin-right: 0;
+                color: darkblue;
+                border-color: white;
+            }
+
+    .news .news-item dt {
+        width: 350px;
+        height: 205px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        border: 1px solid #eee;
+        border-radius: 6px;
+    }
+
+        .news .news-item dt img {
+            width: 100%;
+            height: auto;
+            transition: all .5s;
+        }
+
+        .news .news-item dt:hover img {
+            transform: scale(1.05);
+        }
+
+        .news .news-item dt p {
+            font-size: 14px;
+            line-height: 58px;
+            color: #666;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+    .news .news-item dd {
+        font-size: 14px;
+        line-height: 30px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+        .news .news-item dd a {
+            transition: all .2s;
+        }
+
+        .news .news-item dd span {
+            float: left;
+            width: 50px;
+            color: #999;
+        }

@@ -1,0 +1,382 @@
+@charset "utf-8";
+/*
+ 
+ * 17素材vip建站专区模块代码
+ * 详尽信息请看官网：http://www.17sucai.com/pins/vip
+ *
+ * Copyright , 温州易站网络科技有限公司版权所有
+ *
+ * 请尊重原创，未经允许请勿转载。
+ * 在保留版权的前提下可应用于个人或商业用途
+ 
+*/
+
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+b,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+	font-weight: 700;
+	font-style: normal;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.yun-main-hd {
+	padding-top: 45px;
+	text-align: center
+}
+
+.yun-main-hd .yun-main-title {
+	line-height: 44px;
+	font-size: 32px;
+	color: #0989c5
+}
+
+.yun-main-hd .yun-main-des {
+	margin-top: 10px;
+	line-height: 36px;
+	font-size: 18px;
+	color: #666
+}
+
+.yun-main-bd {
+	padding-top: 30px
+}
+
+.w {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.yun-solution-slider {
+	margin-top: 30px
+}
+
+.yun-solution-slider-content {
+	position: relative
+}
+
+.yun-solution-slider-content .yun-solution-wrap {
+	position: relative;
+	height: 454px;
+	height: 457px\0;
+	
+}
+
+.yun-solution-slider-content .yun-solution-item {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 475px;
+	color: #fff;
+	background-size: cover!important;
+	-webkit-transition: all .2s cubic-bezier(.4, 0, .2, 1);
+	transition: all .2s cubic-bezier(.4, 0, .2, 1)
+}
+
+.yun-solution-slider-content .yun-solution-item.current {
+	z-index: 2;
+	opacity: 1;
+	filter: alpha(opacity=100)
+}
+
+.yun-solution-slider-content .yun-solution-item-content {
+	margin: 0 auto;
+	padding-top: 130px;
+	width: 91.66666666666667%;
+	max-width: 1100px
+}
+
+.yun-solution-slider-content .yun-solution-text-wrap {
+	float: left;
+	padding-right: 40px;
+	width: 590px
+}
+
+.yun-solution-slider-content .yun-solution-text-wrap .yun-solution-btn {
+	margin-top: 15px;
+	display: inline-block;
+	box-sizing: border-box;
+	min-width: 70px;
+	background: #fff;
+	color: #03004c;
+	text-align: center;
+	padding: 0 30px;
+	height: 36px;
+	line-height: 36px;
+	border-radius: 18px;
+	font-size: 14px;
+	opacity: .9;
+	filter: alpha(opacity=90);
+	-webkit-transition: all .25s ease;
+	transition: all .25s ease
+}
+
+.yun-solution-slider-content .yun-solution-text-wrap .yun-solution-btn:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	box-shadow: 0 0 10px 0 rgba(3, 0, 76, .3)
+}
+
+.yun-solution-slider-content .yun-solution-title {
+	line-height: 44px;
+	font-size: 24px;
+	font-weight: 700;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden
+}
+
+.yun-solution-slider-content .yun-solution-title em {
+	font-size: 28px
+}
+
+.yun-solution-slider-content .yun-solution-des {
+	margin-top: 15px;
+	max-height: 120px;
+	line-height: 30px;
+	overflow: hidden;
+	font-size: 16px
+}
+
+.yun-solution-slider-content .yun-solution-logo-wrap {
+	float: left;
+	margin-left: 40px;
+	width: 420px;
+	max-height: 230px;
+	overflow: hidden;
+	font-size: 0
+}
+
+.yun-solution-slider-content .yun-solution-logo-wrap:after {
+	content: "";
+	width: 0;
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle
+}
+
+.yun-solution-slider-content .yun-solution-logo-list {
+	display: inline-block
+}
+
+.yun-solution-slider-content .yun-solution-logo-list li {
+	display: inline-block;
+	margin-top: 40px;
+	width: 33%;
+	vertical-align: middle;
+	text-align: left
+}
+
+.yun-solution-list-wrap {
+	position: relative;
+	height: 132px;
+	overflow: hidden
+}
+
+.yun-solution-list-wrap:hover .yun-solution-btn {
+	display: block
+}
+
+.yun-solution-list-wrap .yun-solution-btn {
+	display: none;
+	position: absolute;
+	top: 60px;
+	width: 40px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 40px;
+	color: #0989c5;
+	opacity: .6;
+	filter: alpha(opacity=60);
+	-webkit-transition: all .4s cubic-bezier(.4, 0, .2, 1);
+	transition: all .4s cubic-bezier(.4, 0, .2, 1)
+}
+
+.yun-solution-list-wrap .yun-solution-btn:hover {
+	opacity: 1;
+	filter: alpha(opacity=100)
+}
+
+.yun-solution-list-wrap .yun-solution-btn.disabled {
+	display: none
+}
+
+.yun-solution-list-wrap .yun-solution-btn-prev {
+	left: 0
+}
+
+.yun-solution-list-wrap .yun-solution-btn-next {
+	right: 0
+}
+
+.yun-solution-list {
+	padding-top: 35px;
+	text-align: center;
+	font-size: 0
+}
+
+.yun-solution-list .yun-solution-list-item {
+	display: inline-block;
+	vertical-align: top;
+	width: 12.5%;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer
+}
+
+.yun-solution-list .img-wrap {
+	margin: 0 auto;
+	width: 42px;
+	height: 42px;
+	overflow: hidden;
+	background-size: 42px;
+	background-position: 0 0
+}
+
+.yun-solution-list .yun-solution-text {
+	margin-top: 15px;
+	line-height: 20px;
+	color: #0989c5
+}
+
+.yun-arrow-wrap {
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	bottom: 0;
+	display: table;
+	width: 100%;
+	height: 18px;
+	overflow: hidden
+}
+
+.yun-arrow-wrap .yun-arrow-item {
+	display: table-cell;
+	position: relative;
+	width: auto;
+	background-color: #fff
+}
+
+.yun-arrow-wrap .yun-arrow-triangle {
+	width: 1200px;
+	height: 17px;
+	background-color: transparent
+}
+
+.yun-arrow-wrap .yun-arrow-triangle:after,
+.yun-arrow-wrap .yun-arrow-triangle:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 50%;
+	box-sizing: border-box
+}
+
+.yun-arrow-wrap .yun-arrow-triangle:before {
+	right: 50%;
+	border-bottom: 18px solid #fff;
+	border-right: 22px solid transparent
+}
+
+.yun-arrow-wrap .yun-arrow-triangle:after {
+	left: 50%;
+	border-bottom: 18px solid #fff;
+	border-left: 22px solid transparent
+}
+
+.yun-arrow-wrap.yun-arrow-current1 .yun-arrow-triangle:before {
+	right: 94%
+}
+
+.yun-arrow-wrap.yun-arrow-current1 .yun-arrow-triangle:after {
+	left: 6%;
+	width: 94%
+}
+
+.yun-arrow-wrap.yun-arrow-current2 .yun-arrow-triangle:before {
+	right: 81%
+}
+
+.yun-arrow-wrap.yun-arrow-current2 .yun-arrow-triangle:after {
+	left: 19%;
+	width: 81%
+}
+
+.yun-arrow-wrap.yun-arrow-current3 .yun-arrow-triangle:before {
+	right: 69%
+}
+
+.yun-arrow-wrap.yun-arrow-current3 .yun-arrow-triangle:after {
+	left: 31%;
+	width: 69%
+}
+
+.yun-arrow-wrap.yun-arrow-current4 .yun-arrow-triangle:before {
+	right: 56%
+}
+
+.yun-arrow-wrap.yun-arrow-current4 .yun-arrow-triangle:after {
+	left: 44%;
+	width: 56%
+}
+
+.yun-arrow-wrap.yun-arrow-current5 .yun-arrow-triangle:before {
+	right: 44%;
+	width: 56%
+}
+
+.yun-arrow-wrap.yun-arrow-current5 .yun-arrow-triangle:after {
+	left: 56%
+}
+
+.yun-arrow-wrap.yun-arrow-current6 .yun-arrow-triangle:before {
+	right: 31%;
+	width: 69%
+}
+
+.yun-arrow-wrap.yun-arrow-current6 .yun-arrow-triangle:after {
+	left: 69%
+}
+
+.yun-arrow-wrap.yun-arrow-current7 .yun-arrow-triangle:before {
+	right: 19%;
+	width: 81%
+}
+
+.yun-arrow-wrap.yun-arrow-current7 .yun-arrow-triangle:after {
+	left: 81%
+}
+
+.yun-arrow-wrap.yun-arrow-current8 .yun-arrow-triangle:before {
+	right: 6%;
+	width: 94%
+}
+
+.yun-arrow-wrap.yun-arrow-current8 .yun-arrow-triangle:after {
+	left: 94%
+}

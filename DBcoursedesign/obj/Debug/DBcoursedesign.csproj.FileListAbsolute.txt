@@ -241,8 +241,8 @@ C:\Users\陀螺不会飞\Documents\DBcoursedesign2\DBcoursedesign\bin\zh-Hans\Sy
 C:\Users\陀螺不会飞\Documents\DBcoursedesign2\DBcoursedesign\bin\zh-Hans\System.Web.WebPages.resources.dll
 C:\Users\陀螺不会飞\Documents\DBcoursedesign2\DBcoursedesign\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 C:\Users\陀螺不会飞\Documents\DBcoursedesign2\DBcoursedesign\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-C:\Users\陀螺不会飞\Documents\DBcoursedesign2\DBcoursedesign\obj\Debug\DBcoursedesign.csprojAssemblyReference.cache
 C:\Users\陀螺不会飞\Documents\DBcoursedesign2\DBcoursedesign\obj\Debug\DBcoursedesign.csproj.CoreCompileInputs.cache
 C:\Users\陀螺不会飞\Documents\DBcoursedesign2\DBcoursedesign\obj\Debug\DBcoursedesign.csproj.CopyComplete
 C:\Users\陀螺不会飞\Documents\DBcoursedesign2\DBcoursedesign\obj\Debug\DBcoursedesign.dll
 C:\Users\陀螺不会飞\Documents\DBcoursedesign2\DBcoursedesign\obj\Debug\DBcoursedesign.pdb
+C:\Users\陀螺不会飞\Documents\DBcoursedesign2\DBcoursedesign\obj\Debug\DBcoursedesign.csprojAssemblyReference.cache
