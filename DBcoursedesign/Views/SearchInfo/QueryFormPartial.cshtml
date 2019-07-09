@@ -1,0 +1,17 @@
+﻿
+@using (Ajax.BeginForm("Find", new AjaxOptions { OnSuccess = "renderCustomerList" }))
+{
+<fieldset>
+    <legend><font color="white">站点查询</font></legend>
+    <br />
+    <label class="control-label" for="ClientLocation"><font color="white">当前所在位置 :</font></label>
+    <input type="text" name="ClientLocation" class="input-medium search-query" style="background:white;width:30%;height:30px" />
+    <label class="control-label" for="Distance"><font color="white">&#8195&#8195查询范围 :</font></label>
+    <input type="text" name="Distance" class="input-medium search-query" style="background:white;width:30%;height:30px" />
+    <label class="control-label"><font color="white">公里以内</font></label><br />
+    <label class="control-label" for="homePick"><font color="white">是否可上门自取 :</font></label>
+    <input type="radio" name="homePick" value="yes" /><font color="white">是</font>
+    <input type="radio" name="homePick" value="no" /><font color="white">否</font><br/>
+    <input type="submit" value="提交" class="btn btn-primary" />
+</fieldset>
+}

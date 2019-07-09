@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Contact>
+
+<br /><br /><br />
+<br /><br /><br />
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th><font color="white">ID</font></th>
+            <th><font color="white">Distribution Centre Name</font></th>
+            <th><font color="white">Distribution Centre Address</font></th>
+            <th><font color="white">Distribution Centre Tel</font></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contact in Model)
+        {
+            <tr>
+                <td><font color="white">@Ajax.ActionLink(contact.Id, "Update", new { contactId = contact.Id }, new AjaxOptions { OnSuccess = "showDialog", HttpMethod = "GET" })</font></td>
+                <td><font color="white">@contact.DistributionCentreName</font></td>
+                <td><font color="white">@contact.DistributionCentreAddress</font></td>
+                <td><font color="white">@contact.DistributionCentreTel</font></td>
+            </tr>
+        }
+    </tbody>
+</table>

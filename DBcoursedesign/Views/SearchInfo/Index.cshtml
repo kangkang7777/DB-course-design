@@ -1,0 +1,65 @@
+﻿<html>
+<head>
+    <title>Contacts</title>
+    <link href="@Url.Content("~/Assets/css/bootstrap.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Assets/css/bootstrap-responsive.css")" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .field-validation-error {
+            color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        function renderDistributionCentreList(data) {
+            $("#contactList").html(data);
+        }
+
+        function showDialog(data) {
+            $("#contactDialog").html(data);
+            $("#contactDialog form")
+                .removeData("validator")
+                .removeData("unobtrusiveValidation");
+            $.validator.unobtrusive.parse($("#contactDialog form"));
+            $("#contactDialog").modal();
+        }
+
+        function reLoad(data) {
+            if (data == "OK") {
+                $("#contactDialog").modal("hide");
+                $(".form-search form").submit();
+            }
+        }
+    </script>
+</head>
+<body>
+    <br /><br /><br />
+    <br /><br /><br />
+    <a href="#DistributionCentreSearch">站点查询</a>
+    <a href="#CostSearch">费用查询</a>
+    <br /><hr /><br />
+    <a name="#DistributionCentreSearch" id="#DistributionCentreSearch"></a>
+    <div class="form-search">
+        @Html.Partial("QueryFormPartial")
+    </div>
+    <div id="contactList"></div>
+    <div class="modal fade" id="contactDialog"></div>
+
+    <script type="text/javascript" src="@Url.Content("~/Assets/js/jquery-1.7.1.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Assets/js/bootstrap.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Assets/js/jquery.unobtrusive-ajax.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Assets/js/jquery.validate.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Assets/js/jquery.validate.unobtrusive.min.js")"></script>
+    <br /><hr /><br />
+    <a name="#CostSearch" id="#CostSearch"></a>
+    <div class="form-search">
+        @Html.Partial("QueryFormPartial2")
+    </div>
+    <div id="contactList"></div>
+    <div class="modal fade" id="contactDialog"></div>
+
+    <script type="text/javascript" src="@Url.Content("~/Assets/js/jquery-1.7.1.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Assets/js/bootstrap.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Assets/js/jquery.unobtrusive-ajax.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Assets/js/jquery.validate.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Assets/js/jquery.validate.unobtrusive.min.js")"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+@using (Ajax.BeginForm("Find2", new AjaxOptions { OnSuccess = "renderCustomerList" }))
+{
+<fieldset>
+    <legend><font color="white">费用查询</font></legend>
+    <br />
+    <label class="control-label" for="Departure"><font color="white">出发地 :</font></label>
+    <input type="text" name="Departure" class="input-medium search-query" style="background:white;width:30%;height:30px" />
+    <label class="control-label" for="Destination"><font color="white">&#8195&#8195目的地 :</font></label>
+    <input type="text" name="Destination" class="input-medium search-query" style="background:white;width:30%;height:30px" /><br /><br />
+    <label class="control-label" for="CargoType"><font color="white">货物种类 :</font></label>
+    <input type="text" name="CargoType" class="input-medium search-query" style="background:white;width:30%;height:30px" />
+    <label class="control-label" for="Weight"><font color="white">&#8195&#8195重量 :</font></label>
+    <input type="text" name="Weight" class="input-medium search-query" style="background:white;width:30%;height:30px" />
+    <label class="control-label"><font color="white">kg</font></label><br />
+    <label class="control-label" for="Fragile"><font color="white">是否易碎 :</font></label>
+    <input type="radio" name="Fragile" value="yes" /><font color="white">是</font>
+    <input type="radio" name="Fragile" value="no" /><font color="white">否</font><br />
+    <input type="submit" value="提交" class="btn btn-primary" />
+</fieldset>
+}

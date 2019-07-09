@@ -1,0 +1,152 @@
+﻿
+@{
+    ViewBag.Title = "PersonInformation";
+}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900" rel="stylesheet">
+</head>
+<body>
+    <br /><br /><br />
+    <br /><br /><br />
+
+    <div class="signupform">
+        <div class="container">
+
+            <div class="agile_info">
+                <div class="w3l_form">
+                    <div class="left_grid_info">
+                        <div class="con4">
+                            <canvas id="cvs" class="round_icon"></canvas>
+                            <span class="btn upload">上传头像<input type="file" class="upload_pic" id="upload" /></span>
+                        </div>
+                        <script>
+                            //获取上传按钮
+                            var input1 = document.getElementById("upload");
+                            if (typeof FileReader === 'undefined') {
+                                //result.innerHTML = "抱歉，你的浏览器不支持 FileReader";
+                                input1.setAttribute('disabled', 'disabled');
+                            } else {
+                                input1.addEventListener('change', readFile, false);
+                                /*input1.addEventListener('change',function (e){
+                              console.log(this.files);//上传的文件列表
+                         },false); */
+                            }
+
+                            function readFile() {
+                                var file = this.files[0]; //获取上传文件列表中第一个文件
+                                if (!/image\/\w+/.test(file.type)) {
+                                    //图片文件的type值为image/png或image/jpg
+                                    alert("文件必须为图片！");
+                                    return false;
+                                }
+                                // console.log(file);
+                                var reader = new FileReader(); //实例一个文件对象
+                                reader.readAsDataURL(file); //把上传的文件转换成url
+                                //当文件读取成功便可以调取上传的接口
+                                reader.onload = function (e) {
+                                    // console.log(this.result);//文件路径
+                                    // console.log(e.target.result);//文件路径
+                                    /*var data = e.target.result.split(',');
+                            var tp = (file.type == 'image/png')? 'png': 'jpg';
+                            var imgUrl = data[1];//图片的url，去掉(data:image/png;base64,)
+                            //需要上传到服务器的在这里可以进行ajax请求
+                            // console.log(imgUrl);
+                            // 创建一个 Image 对象
+                            var image = new Image();
+                            // 创建一个 Image 对象
+                            // image.src = imgUrl;
+                            image.src = e.target.result;
+                            image.onload = function(){
+                                document.body.appendChild(image);
+                            }*/
+                                    var image = new Image();
+                                    // 设置src属性
+                                    image.src = e.target.result;
+                                    var max = 200;
+                                    // 绑定load事件处理器，加载完成后执行，避免同步问题
+                                    image.onload = function () {
+                                        // 获取 canvas DOM 对象
+                                        var canvas = document.getElementById("cvs");
+                                        // 如果高度超标 宽度等比例缩放 *=
+                                        /*if(image.height > max) {
+                                    image.width *= max / image.height;
+                                    image.height = max;
+                                } */
+                                        // 获取 canvas的 2d 环境对象,
+                                        var ctx = canvas.getContext("2d");
+                                        // canvas清屏
+                                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                                        // 重置canvas宽高
+                                        /*canvas.width = image.width;
+                                canvas.height = image.height;
+                                if (canvas.width>max) {canvas.width = max;}*/
+                                        // 将图像绘制到canvas上
+                                        // ctx.drawImage(image, 0, 0, image.width, image.height);
+                                        ctx.drawImage(image, 0, 0, 300, 150);
+                                        // 注意，此时image没有加入到dom之中
+                                    };
+                                }
+                            };
+                        </script>
+                        <h3>欢迎使用物流系统!</h3>
+                        <h4>我们将尽心尽力为您服务.</h4>
+                        <p> 为更好使用系统，请尽快完善个人信息，姓名、身份证号码与常用收货地址为必填项，否则无法使用系统的大部分功能.</p>
+                    </div>
+                </div>
+                <div class="w3_info">
+                    <h2>完善个人信息</h2>
+                    <p>你可在信息框中修改下列信息并保存.</p>
+                    <form action="~/Controllers/ClientInfoController/SaveInfo" method="post">
+                        <h4>姓名</h4>
+                        <div class="input-group">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <input id="ClientName" name="ClientName" type="text" value="First Name" required="">
+                            @Html.ValidationMessage("ClientName")
+                        </div>
+                        @*value的值为数据库中用户对应信息的值*@
+                        <h4>性别</h4><br />
+                        <select id="sex" name="sex">
+                            <option value="male" selected>男</option>	//预选设置
+                            <option value="female">女</option>
+                        </select>
+                        @Html.ValidationMessage("sex")
+                        <br />
+                        <br />
+                        <h4>年龄</h4>
+                        <div class="input-group">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <input id="age" name="age" type="text" value="First Name" required="">
+                            @Html.ValidationMessage("age")
+                        </div>
+                        <h4>身份证号码</h4>
+                        <div class="input-group">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <input id="IDnum" name="IDnum" type="text" value="First Name" required="">
+                            @Html.ValidationMessage("IDNum")
+                        </div>
+                        <h4>电话</h4>
+                        <div class="input-group">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <input id="ClientTel" name="ClientTel" type="text" value="First Name" required="">
+                            @Html.ValidationMessage("ClientTel")
+                        </div>
+                        <h4>常用地址</h4>
+                        <div class="input-group">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <input id="ClientAddress" name="ClientAddress" type="text" value="First Name" required="">
+                            @Html.ValidationMessage("ClientAddress")
+                        </div>
+                        <button class="btn btn-danger btn-block" type="submit" name="BtnSave">保存更改</button>
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+

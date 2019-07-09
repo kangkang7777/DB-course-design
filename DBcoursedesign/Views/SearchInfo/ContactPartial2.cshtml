@@ -1,0 +1,46 @@
+﻿@model Contact
+@{
+    Layout = null;
+}
+@using (Ajax.BeginForm("Update2", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "reLoad" }, new { @class = "form-horizontal" }))
+{
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Contact Information</h3>
+    </div>
+    <div class="modal-body">
+        @*<div class="control-group">
+            @Html.HiddenFor(model => model.Id)
+            @Html.LabelFor(model => model.ClientLocation, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.ClientLocation)
+                @Html.ValidationMessageFor(model => model.ClientLocation)
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.LabelFor(model => model.Distance, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.Distance)
+                @Html.ValidationMessageFor(model => model.Distance)
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.LabelFor(model => model.HomePick, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.HomePick)
+                @Html.ValidationMessageFor(model => model.HomePick)
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.LabelFor(model => model.DistributionCentreTel, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.DistributionCentreTel)
+                @Html.ValidationMessageFor(model => model.DistributionCentreTel)
+            </div>
+        </div>*@
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">Close</a>
+        <input type="submit" class="btn btn-primary" value="Save" />
+    </div>
+}
